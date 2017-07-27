@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.post('/sayhello', function(req, res) {
   console.log("I'm in your route handler");
   console.log('The body', req.body);
-  res.json(req.body);
+  res.render('hello', req.body);
 });
 
 app.listen(3000, function() {
