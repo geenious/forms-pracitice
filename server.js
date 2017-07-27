@@ -1,5 +1,6 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
+const bodyParser = require('body-parser');
 
 // create the app
 const app = express();
@@ -10,7 +11,7 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
 
-app.pst('/sayhello', function(req, res) {
+app.post('/sayhello', function(req, res) {
   console.log("I'm in your route handler");
 });
 
